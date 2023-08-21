@@ -1,5 +1,6 @@
 import "./App.css";
 import ExpenseItem from "./components/ExpenseItem";
+import Card from "./components/Card";
 
 function App() {
   const expenses = [
@@ -30,8 +31,7 @@ function App() {
   ];
 
   return (
-    <div>
-      <h2>Expenses</h2>
+    <Card className="expenses">
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
@@ -52,7 +52,7 @@ function App() {
         amount={expenses[3].amount}
         date={expenses[3].date}
       ></ExpenseItem>
-    </div>
+    </Card>
   );
 }
 
